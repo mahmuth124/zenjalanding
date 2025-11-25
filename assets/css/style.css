@@ -1,0 +1,415 @@
+﻿/* ==========================
+   الأساسيات
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: #ffffff;
+    color: #0A1A2F;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 92%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 48px 0;
+}
+
+.section-alt {
+    background: #f4f7fb;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ==========================
+   الأزرار — Navy Style
+========================== */
+.btn {
+    display: inline-block;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-primary {
+    background: #0A1A2F;
+    color: #fff;
+}
+
+    .btn-primary:hover {
+        background: #112A45;
+    }
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+/* ==========================
+   الهيدر — أبيض + كحلي
+========================== */
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav {
+    display: none;
+}
+
+/* ==========================
+   البطل (Hero)
+========================== */
+.hero {
+    padding: 32px 0 40px;
+    background: #ffffff;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    color: #0A1A2F;
+}
+
+.hero-subtitle {
+    margin-top: 6px;
+    font-size: 15px;
+    opacity: 0.85;
+    color: #112A45;
+}
+
+.hero-bullets {
+    margin: 18px 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: right;
+    color: #0A1A2F;
+}
+
+    .hero-bullets li::before {
+        content: "•";
+        position: absolute;
+        right: 0;
+        color: #112A45;
+        font-size: 16px;
+    }
+
+.hero-image {
+    width: 80%;
+    max-width: 280px;
+}
+
+/* ==========================
+   الفوائد
+========================== */
+.benefit-card {
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(10,26,47,0.05);
+}
+
+/* ==========================
+   الريفيوز
+========================== */
+.review-card {
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(10,26,47,0.05);
+}
+
+/* ==========================
+   الفورم — Navy Border
+========================== */
+.order-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #dce3ec;
+    box-shadow: 0 4px 16px rgba(10,26,47,0.08);
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #0A1A2F;
+}
+
+.form-group input {
+    border: 1px solid #c7d3e2;
+    color: #0A1A2F;
+}
+
+    .form-group input:focus {
+        border-color: #0A1A2F;
+    }
+
+/* ==========================
+   الفوتر — Navy
+========================== */
+.site-footer {
+    background: #0A1A2F;
+    color: #fff;
+    padding: 22px 0 26px;
+    margin-top: 32px;
+}
+
+    .site-footer p {
+        text-align: center;
+        font-size: 12px;
+        opacity: 0.8;
+    }
+
+/* ==========================
+   Sticky CTA للموبايل
+========================== */
+.mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #fffffffa;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.12);
+    padding: 10px 12px;
+    z-index: 999;
+}
+
+    .mobile-sticky-cta .btn {
+        width: 100%;
+        background: #0A1A2F;
+        font-size: 15px;
+    }
+
+/* ==========================
+   تابلت + لابتوب
+========================== */
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 900px;
+    }
+
+    .nav {
+        display: block;
+    }
+
+        .nav a {
+            margin-left: 16px;
+            color: #0A1A2F;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+            .nav a:hover {
+                color: #112A45;
+            }
+
+    .hero-inner {
+        flex-direction: row;
+        text-align: right;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .order-container {
+        flex-direction: row;
+    }
+    /* ==========================
+   تحسين تصميم الفورم (Zenja Form)
+   أضف هذا في آخر style.css
+========================== */
+
+    .order-section,
+    #order {
+        scroll-margin-top: 90px;
+    }
+
+    .order-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* كارت الفورم */
+    .order-form-wrapper {
+        width: 100%;
+    }
+
+    .order-form {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 20px 18px;
+        border: 1px solid rgba(10, 26, 47, 0.08);
+        box-shadow: 0 10px 30px rgba(10, 26, 47, 0.10);
+        position: relative;
+        overflow: hidden;
+    }
+
+        /* خط ديكوري خفيف فوق الفورم */
+        .order-form::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0A1A2F, #112A45);
+        }
+
+    /* ==========================
+   FORM: Zenja Order Styling
+   (يطبق فقط على سكشن الطلب)
+========================== */
+
+    /* حصر كل الستايل ضمن سكشن #order */
+    #order .order-form {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 20px 18px;
+        border: 1px solid rgba(10, 26, 47, 0.08);
+        box-shadow: 0 10px 30px rgba(10, 26, 47, 0.10);
+        position: relative;
+        overflow: hidden;
+    }
+
+        #order .order-form::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0A1A2F, #112A45);
+        }
+
+        /* اللابل */
+        #order .order-form .form-group {
+            margin-bottom: 14px;
+        }
+
+            #order .order-form .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #0A1A2F;
+            }
+
+        /* الإنپت نفسه */
+        #order .order-form input,
+        #order .order-form select {
+            width: 100%;
+            padding: 13px 14px;
+            font-size: 15px;
+            border-radius: 12px;
+            border: 1px solid #d4dce6;
+            background: #f6f9fc;
+            color: #0A1A2F;
+            letter-spacing: 0.3px;
+            transition: border-color .2s, box-shadow .2s, background .2s;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+            /* Placeholder */
+            #order .order-form input::placeholder,
+            #order .order-form select::placeholder {
+                color: #9aa7b8;
+                opacity: 0.85;
+            }
+
+            /* Focus */
+            #order .order-form input:focus,
+            #order .order-form select:focus {
+                background: #ffffff;
+                border-color: #0A1A2F;
+                box-shadow: 0 0 0 2px rgba(10, 26, 47, 0.15);
+                outline: none;
+            }
+
+            /* رقم الجوال LTR */
+            #order .order-form input[type="tel"] {
+                direction: ltr;
+                text-align: left;
+                letter-spacing: 1px;
+            }
+
+        /* زر الإرسال */
+        #order .order-form .btn-primary {
+            margin-top: 6px;
+            padding: 13px 18px;
+            border-radius: 12px;
+            font-size: 15px;
+        }
+
+        #order .order-form .form-note {
+            margin-top: 10px;
+            font-size: 12px;
+            text-align: center;
+            color: #7b8797;
+        }
+
+
+}
